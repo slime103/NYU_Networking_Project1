@@ -3,6 +3,7 @@ import os
 import random
 import string
 #TODO: import socket libraries
+from socket import *
 
 NUM_TRANSMISSIONS=200
 

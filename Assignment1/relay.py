@@ -1,5 +1,6 @@
 import sys
 # TODO: import socket libraries
+from socket import *
 
 
 NUM_TRANSMISSIONS=200

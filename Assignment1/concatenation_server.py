@@ -38,14 +38,14 @@ clientSocket, address = sock.accept()
 for i in range(NUM_TRANSMISSIONS):
     # TODO: receive data over the socket returned by the accept() method
     rs = clientSocket.recv(10)
-# TODO: print out the received data for debugging
-    print("received: " + rs.decode("utf-8"))
-# TODO: Generate a new string of length 10 using rand_str
+    # TODO: print out the received data for debugging
+    print("received data: " + rs.decode("utf-8"), end="; ")
+    # TODO: Generate a new string of length 10 using rand_str
     rs2 = rand_str()
-    print("appendend: " + rs2)
-# TODO: Append the string to the buffer received
+    print("appended: " + rs2)
+    # TODO: Append the string to the buffer received
     concat = rs.decode("utf-8") + rs2
-# TODO: Send the new string back to the client
+    # TODO: Send the new string back to the client
     clientSocket.send(bytes(concat, "utf-8"))
 # TODO: Close all sockets that were created
 clientSocket.close()
